@@ -10,12 +10,11 @@ public class SearchingThread extends Thread {
     private static int counterOfSearchingThreads; // For outbound purposes
     private int counterOfSearchingOfCurrentThreads; // For outbound purposes
     private static boolean isFound = false;
-    public static ArrayList<SearchingThread> threads;
+    public static ArrayList<SearchingThread> threads = new ArrayList<>();
 
     public SearchingThread(File fileOrDirectory, String fileName) {
         this.fileOrDirectory = fileOrDirectory;
         this.fileName = fileName;
-        SearchingThread.threads = new ArrayList<>();
     }
 
     @Override
